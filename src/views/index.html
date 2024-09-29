@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/view.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Users</title>
+    <script type="module" src="js/modules.js"></script>
+</head>
+<body>
+    <header>
+        <img src="https://7212050.fs1.hubspotusercontent-na1.net/hubfs/7212050/Sitio%20.COM/new-content/nuevo-logo-colsubsidio-2021.svg" alt="Colsubsidio caja de compensación familiar" title="Colsubsidio caja de compensación familiar" class="desktop" loading="lazy" width="170" height="43">
+        <p>Gestor de Usuarios</p>
+    </header>
+    <div id="notification" class="notification"></div>
+    <div class="container">
+        <section class="section-column">
+            <p>Crear un usuario</p>
+            <form id="createUserForm" name="createUserForm">
+                <input id="id" type="text" name="id" maxlength="100" placeholder="Identificacion">
+                <input id="name" type="text" name="name" maxlength="100" placeholder="Nombre">
+                <input id="lastname" type="text" name="lastname" maxlength="150" placeholder="Apellido">
+                <div class="inputfile-box">
+                    <input type="file" id="photo" name="photo" accept="image/*" class="inputfile" onchange='uploadFile(this)'>
+                    <label for="photo">
+                        <span id="file-name" class="file-box">Fotografía</span>
+                        <span class="file-button"><i class="fa fa-upload" aria-hidden="true"></i> Cargar </span>
+                    </label>
+                </div>
+                <button type="button" onclick="createUser()" value="Create">Crear</button>
+            </form>
+        </section>
+        <section class="section-column">
+            <div class="section-search">
+                <p>Listado Usuarios</p>
+                <input type="text" id="search" name="search" placeholder="Buscar" onkeyup = "if(event.keyCode == 13) sendSearch()">
+                <button onclick="sendSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Identificacion</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                    </tr>
+                </thead>
+                <tbody id="users">
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>
