@@ -28,7 +28,7 @@ async function usersTable(){
         userTable.sync(); // Add this line to create the table if it doesn't exist
         return userTable;
     }catch(e){
-        console.error('Error al inicializar la tabla:', error);
+        console.error('Error al inicializar la tabla:', e);
         throw error;
     }
 }
