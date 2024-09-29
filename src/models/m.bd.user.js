@@ -29,7 +29,7 @@ async function usersTable(){
         return userTable;
     }catch(e){
         console.error('Error al inicializar la tabla:', e);
-        throw error;
+        throw e;
     }
 }
 module.exports = usersTable;
