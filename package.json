@@ -1,0 +1,35 @@
+{
+  "name": "colsubsidio-22-septiembre",
+  "version": "1.0.0",
+  "description": "Proyecto de registro y consulta de usuarios",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "liveserver": "node --watch --watch-preserve-output --watch-path=\"./src\" --watch-path=\"./src/views\" \"src/index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adgsgutierrez/colsubsidio-22-septiembre.git"
+  },
+  "keywords": [
+    "nodejs",
+    "S3",
+    "express"
+  ],
+  "author": "Aric Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adgsgutierrez/colsubsidio-22-septiembre/issues"
+  },
+  "homepage": "https://github.com/adgsgutierrez/colsubsidio-22-septiembre#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1691.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.2",
+    "sequelize": "^6.37.3",
+    "uuid": "^10.0.0"
+  }
+}
